@@ -63,13 +63,17 @@ const profile = {
     { name: "Kyrgyz", level: "Basic" }
   ],
   github: "https://github.com/Sunatillo2024",
-  telegram: "https://t.me/Sunatillo2024",
-  email: "sunatlohgafur1214@gmail.com"
+  telegram: "https://t.me/Drf_2026",
+  email: "sunatlohgafur1214@gmail.com",
+  instagram: "https://www.instagram.com/m.tillo__",
+  phone: "+996 995 22 14 21"
 };
 const contactLinks = [
   { label: "Telegram", url: profile.telegram },
   { label: "Email", url: profile.email ? `mailto:${profile.email}` : "" },
-  { label: "GitHub", url: profile.github }
+  { label: "GitHub", url: profile.github },
+  { label: "Instagram", url: profile.instagram },
+  { label: "Phone", url: profile.phone ? `tel:${profile.phone.replace(/\s+/g, "")}` : "" }
 ].filter((item) => item.url);
 
 /* ===== VISUAL PREVIEWS ===== */
