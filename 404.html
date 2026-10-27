@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Opening portfolio…</title></head>
+  <body>
+    <script>
+      (function () {
+        // GitHub Pages serves this file for unknown paths while keeping the URL.
+        // Rebuild the deploy base ("/" locally, "/Sunatillo-dev_ai/" on Pages) so the
+        // redirect never assumes the site lives at the domain root.
+        var path = location.pathname;
+        var projectMarker = path.indexOf("/projects/");
+        var base = "/";
+        if (projectMarker >= 0) {
+          base = path.slice(0, projectMarker + 1);
+        } else if (path.split("/").filter(Boolean).length > 1) {
+          base = "/" + path.split("/").filter(Boolean)[0] + "/";
+        }
+        location.replace(base + "?path=" + encodeURIComponent(path + location.search) + location.hash);
+      })();
+    </script>
+    <noscript>This portfolio needs JavaScript enabled. Open the site's home URL to continue.</noscript>
+  </body>
+</html>
