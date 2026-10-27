@@ -284,7 +284,7 @@ footer { border-top:1px solid var(--line); padding-top:120px; background:#070411
   .nav-links { gap:12px; }
   .hero { grid-template-columns:1fr; padding-block:56px 72px; gap:32px; }
   .hero h1 { font-size:clamp(44px,9vw,72px); }
-  .hero-visual { min-height:400px; order:-1; }
+  .hero-visual { min-height:400px; }
   .proof-strip { grid-template-columns:repeat(2,1fr); padding-inline:16px; }
   .proof-strip div:nth-child(3) { border-left:1px solid var(--line); }
   .proof-strip div:nth-child(-n+2) { border-bottom:1px solid var(--line); }

@@ -62,8 +62,15 @@ const profile = {
     { name: "Russian", level: "A2–B1" },
     { name: "Kyrgyz", level: "Basic" }
   ],
-  github: "https://github.com/Sunatillo2024"
+  github: "https://github.com/Sunatillo2024",
+  telegram: "https://t.me/Sunatillo2024",
+  email: "sunatlohgafur1214@gmail.com"
 };
+const contactLinks = [
+  { label: "Telegram", url: profile.telegram },
+  { label: "Email", url: profile.email ? `mailto:${profile.email}` : "" },
+  { label: "GitHub", url: profile.github }
+].filter((item) => item.url);
 
 /* ===== VISUAL PREVIEWS ===== */
 function projectVisual(project, large = false) {
@@ -217,7 +224,7 @@ function homePage() {
         <div><p class="section-kicker">05 · ${t("contactKicker")}</p><h2>${t("contactTitle")}</h2></div>
         <div class="footer-actions">
           <p>${t("contactIntro")}</p>
-          <a href="${profile.github}" target="_blank" rel="noreferrer">${t("startGithub")} <span>↗</span></a>
+          ${contactLinks.map((item) => `<a href="${item.url}" target="_blank" rel="noreferrer">${item.label} <span>↗</span></a>`).join("\n          ")}
           <a href="#work">${t("seeProjects")} <span>↗</span></a>
         </div>
       </div>
