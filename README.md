@@ -7,7 +7,7 @@ Static portfolio deployed on GitHub Pages as a **project site**:
 ## How paths work
 
 The site is served from the `/Sunatillo-dev_ai/` subpath, never from the domain root, so no
-internal URL is hard-coded to `/`.
+internal URL is hard-coded to -> `/`.
 
 - `index.html` and `projects/<slug>/index.html` reference CSS, JS and the favicon with
   **document-relative** paths (`assets/…`, `../../assets/…`), which resolve correctly under any
